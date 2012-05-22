@@ -14,7 +14,7 @@ class SvgFragmentImage(qrcode.image.base.BaseImage):
     def __init__(self, border, width, box_size):
         super(SvgFragmentImage, self).__init__(border, width, box_size)
         self.kind = "SVG"
-        ET.register_namespace("svg", self._SVG_namespace)
+        ET.register_namespace("", self._SVG_namespace)
         self._img = self._svg()
 
     def drawrect(self, row, col):
